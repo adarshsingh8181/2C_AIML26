@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Information</h1>
+    <div id="details"></div>
+    <label>Enter Quantity:</label>
+    
+    <input type="number" id="quantityInput" min="0" value="1" onchange="updateQuantity()">
+    <script>
+        let abes = {
+            id: "P101",
+            name: "Duster",
+            price: 50,
+            quantity: 1
+        };
+        function Display() {
+            let total_Price= abes.price * abes.quantity;
+            document.getElementById("details").innerHTML =
+                "Product ID: " + abes.id + "<br>" +
+                "Product Name: " + abes.name + "<br>" +
+                "Price: ₹" + abes.price + "<br>" +
+                "Quantity: " + abes.quantity + "<br>" +
+                "Total Price: ₹" + total_Price;
+        }
+        function updateQuantity() {
+            let quantity = document.getElementById("quantityInput").value;
+            if (quantity>= 0) {
+                abes.quantity = quantity;
+                Display();
+            }
+        }
+        Display();
+    </script>
+</body>
+</html>
