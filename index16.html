@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS in JavaScript</title>
+   <script>
+    class Student {
+        static name = "Adarsh";
+
+        constructor(name) {
+            this.name = name ;
+            console.log(this.name);
+        }
+
+        info() {
+            console.log("Student information");
+            console.log(this.name);
+        }
+    }
+
+    let s1 = new Student();
+    let s2 = new Student("Adarsh");
+
+    s1.info();
+    s2.info();
+</script>
+</head>
+<body>
+    
+</body>
+</html>
