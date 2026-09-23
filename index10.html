@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rest Operator</title>
+</head>
+<body>
+
+    <h2>Rest Operator in JavaScript</h2>
+    <p id="result"></p>
+
+    <script>
+        function addNumbers(...numbers) {
+            let sum = 0;
+
+            for (let num of numbers) {
+                sum += num;
+            }
+
+            return sum;
+        }
+
+        let result = addNumbers(10, 20, 30, 40, 50);
+
+        document.getElementById("result").innerHTML =
+            "Sum = " + result;
+    </script>
+
+</body>
+</html>
