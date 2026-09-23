@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <script>
+        class student{
+
+    static students = 0;
+
+    constructor(rollno, name, marks){
+        this.name=name;
+        this.rollno=rollno;
+        this.marks=marks;
+
+
+
+        student.students++;
+    }
+
+
+    displayresult(){
+        console.log("your name is: ",this.name);
+        console.log("your roll number: ", this.rollno);
+        console.log("your marks: ",this.marks);
+
+        console.log("___________________________________________________________");
+
+        if(this.marks>= 33){
+            console.log("Passed");
+        }
+        else{
+            console.log("Failed");
+        }
+
+    }
+
+    static displaytotalstudent(){
+        console.log("total number of student: ",student.students)
+    }
+    
+}
+
+let student1= new student(21,"Adarsh Singh", 99);
+let student2 = new student(22,"Vikas Sir", 10);
+let student3 = new student(5,"Aditya", 90);
+
+
+student1.displayresult();
+student2.displayresult();
+student3.displayresult();
+student.displaytotalstudent();
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
